@@ -1,0 +1,7 @@
+<div #spacer></div>
+<div class="side-nav-container" stickyThing [spacer]="spacer" marginTop="137">
+  <h4 class="title">Side Menu</h4>
+  <ul class="side-nav">
+    <li class="side-nav-item" *ngFor="let item of menuItems">{{item}}</li>
+  </ul>
+</div>

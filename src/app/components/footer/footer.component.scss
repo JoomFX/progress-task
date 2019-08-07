@@ -1,0 +1,41 @@
+@import '../../../scss/configuration/variables';
+@import '../../../scss/mixins/breakpoints';
+
+footer {
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 10px;
+
+  .content {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .top-arrow {
+    margin-left: 10px;
+  }
+
+  .top-link {
+    color: $main-color-1;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .row {
+    > div {
+      @include breakpoint(mobile-only) {
+        text-align: center !important;
+      }
+    }
+  }
+}

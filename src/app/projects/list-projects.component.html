@@ -1,0 +1,19 @@
+<section id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="block size-75">
+        <div class="content">
+          <app-single-project
+            *ngFor="let project of projects"
+            [project]="project"
+          ></app-single-project>
+        </div>
+      </div>
+      <div class="block size-25">
+        <div class="content">
+          <app-side-nav [menuItems]="menuItems"></app-side-nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

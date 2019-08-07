@@ -1,0 +1,63 @@
+@import '../../../scss/configuration/variables';
+@import '../../../scss/mixins/breakpoints';
+
+#header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 10;
+	@include breakpoint(mobile-only) {
+		text-align: center;
+	}
+	.block {
+		align-self: center;
+	}
+}
+
+.logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  > img {
+    width: 180px;
+  }
+}
+
+.main-menu {
+	font-size: 14px;
+	@include breakpoint(tablet-range) {
+		font-size: 12px;
+	}
+	@include breakpoint(mobile-only) {
+    font-size: 12px;
+    margin-top: -25px;
+	}
+	.toplevel {
+		text-align: right;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@include breakpoint(mobile-only) {
+			text-align: center;
+		}
+		> .menu-item {
+			display: inline-block;
+			> .menu-item-link {
+				display: block;
+        padding: 10px 15px;
+        color: $body-text-color;
+				@include breakpoint(tablet-range) {
+					padding: 12px;
+				}
+				@include breakpoint(mobile-only) {
+					padding: 12px;
+				}
+			}
+			&.active, &:hover {
+				.menu-item-link {
+					color: $main-color-1;
+				}
+			}
+		}
+	}
+}

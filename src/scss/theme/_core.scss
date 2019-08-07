@@ -1,0 +1,120 @@
+// Base Element Styling
+html {
+	height: 100%;
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $grey;
+  color: $body-text-color;
+}
+
+a {
+  background: transparent;
+  color: $main-color-1;
+	text-decoration: none;
+	transition: color 0.2s;
+	&:hover, &:active {
+		outline: 0;
+	}
+}
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0;
+}
+
+// Page Container
+.container {
+	margin: 0 auto;
+	padding: 0;
+	width: $breakpoints-large-desktop-container;
+	@include breakpoint(desktop-range) {
+		width: $breakpoints-desktop-container;
+	}
+	@include breakpoint(tablet-range) {
+		width: $breakpoints-tablet-container;
+	}
+	@include breakpoint(large-mobile-range) {
+		width: $breakpoints-large-mobile-container;
+	}
+	@include breakpoint(small-mobile-range) {
+		width: $breakpoints-mobile-container;
+	}
+}
+
+// Row
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0;
+	padding: 0;
+}
+
+// Block/Column in the Row
+.block {
+	flex: 1;
+	@include breakpoint(mobile-only) {
+		flex-grow: 0;
+		flex-basis: 100%;
+	}
+}
+
+// Content Block Spacing
+.content {
+	margin: $content-margin;
+	padding: $content-padding;
+}
+
+// Size Utility Classes
+.size-20 {
+	flex: 0 1 20%;
+	width: 20%;
+}
+
+.size-25 {
+	flex: 0 1 25%;
+	width: 25%;
+}
+
+.size-75 {
+	flex: 0 1 75%;
+	width: 75%;
+}
+
+.size-20, .size-25, .size-75 {
+	@include breakpoint(mobile-only) {
+		flex-grow: 0;
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}
+
+// Button
+.button {
+	background-color: $main-color-1;
+	color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+	border-radius: 0.1875rem;
+	font-size: 0.9rem;
+	text-align: center;
+  display: inline-block;
+  cursor: pointer;
+	transition: all 0.2s;
+	&:hover {
+		background-color: #000000;
+  }
+  &.dark {
+    background-color: #000000;
+    &:hover {
+      background-color: #666666;
+    }
+  }
+}

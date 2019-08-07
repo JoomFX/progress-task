@@ -1,0 +1,37 @@
+// Media Device Breakpoints
+$breakpoints-large-desktop-container:		75.000rem !default;
+$breakpoints-desktop-container:				60.000rem !default;
+$breakpoints-tablet-container:				48.000rem !default;
+$breakpoints-large-mobile-container:		30.000rem !default;
+$breakpoints-mobile-container:				100% !default;
+
+// Content Block Spacing Variables
+$content-margin:				0.625rem !default;
+$content-padding:				0.938rem !default;
+
+// Base Sizes
+$core-font-size:				1rem !default;
+$core-line-height:			1.5 !default;
+
+// Heading Sizes
+$h1-font-size:					3.5rem !default;
+$h2-font-size:					2.4rem !default;
+$h3-font-size:					1.7rem !default;
+$h4-font-size:					1.1rem !default;
+$h5-font-size:					1rem !default;
+$h6-font-size:					0.875rem !default;
+
+// Font Families
+$body-font:						  "Open Sans", sans-serif !default;
+$heading-font:					"Muli", sans-serif !default;
+
+// Heading Margin
+$heading-margin:				0.5rem !default;
+
+// Colors
+$main-color-1:					#47db00 !default;
+$main-color-2:					#007bff !default;
+$grey:                  #f6f6f6 !default;
+$body-text-color:       #666666 !default;
+$footer-bg-color:       #212529 !default;
+$footer-text-color:     #a4a5a7 !default;

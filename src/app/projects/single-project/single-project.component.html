@@ -1,0 +1,32 @@
+<div class="project">
+  <h4 class="project-company-name">{{project.company_name}}</h4>
+  <div class="project-info">
+    <span class="project-created" tooltip="{{project.publish_date | date:'medium'}}">
+        <i class="date-icon far fa-calendar-alt"></i>{{ +project.publish_date | timeAgo }}
+    </span>
+    <span class="project-comments">
+        <i class="comments-icon far fa-comment"></i>{{project.comments}}
+    </span>
+  </div>
+  <div class="button-container">
+    <button type="button" class="button"
+      *ngIf="!expanded"
+      (click)="onExpand()"
+    >Expand</button>
+    <button type="button" class="button dark"
+      *ngIf="expanded"
+      (click)="onExpand()"
+    >Collapse</button>
+  </div>
+  <div class="project-details" *ngIf="expanded">
+    <ul>
+      <li><span class="item-title">ID:</span> {{project.id}}</li>
+      <li><span class="item-title">Company Name:</span> {{project.company_name}}</li>
+      <li><span class="item-title">Publish Date:</span> {{project.publish_date | date:'medium'}}</li>
+      <li><span class="item-title">Comments:</span> {{project.comments}}</li>
+      <li><span class="item-title">Contact Person:</span> {{project.contact_name}} ({{project.title}})</li>
+      <li><span class="item-title">Location:</span> {{project.location_city}}</li>
+      <li><span class="item-title">Description:</span> {{project.description}}</li>
+    </ul>
+  </div>
+</div>
